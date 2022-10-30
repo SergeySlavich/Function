@@ -1,17 +1,17 @@
-//Project FUNCTION
+п»ї//Project FUNCTION
 #include<iostream>
 using namespace std;
 
 //TODO:
-//0. Выучить теорию по функциям!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-//1. В проект Functions добавить функцию ? ? ? Power(? ? ? ), которая возводит указанное число
-//в указанную степень;
+//0. Р’С‹СѓС‡РёС‚СЊ С‚РµРѕСЂРёСЋ РїРѕ С„СѓРЅРєС†РёСЏРј!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+//1. Р’ РїСЂРѕРµРєС‚ Functions РґРѕР±Р°РІРёС‚СЊ С„СѓРЅРєС†РёСЋ ? ? ? Power(? ? ? ), РєРѕС‚РѕСЂР°СЏ РІРѕР·РІРѕРґРёС‚ СѓРєР°Р·Р°РЅРЅРѕРµ С‡РёСЃР»Рѕ
+//РІ СѓРєР°Р·Р°РЅРЅСѓСЋ СЃС‚РµРїРµРЅСЊ;
 
-int Add(int a, int b); // Прототип функции (Объявление функции - function declaration)
+int Add(int a, int b); // РџСЂРѕС‚РѕС‚РёРї С„СѓРЅРєС†РёРё (РћР±СЉСЏРІР»РµРЅРёРµ С„СѓРЅРєС†РёРё - function declaration)
 int Sub(int a, int b);
 int Mul(int a, int b);
 int Div(int a, int b);
-// Добавляем функцию Power()
+// Р”РѕР±Р°РІР»СЏРµРј С„СѓРЅРєС†РёСЋ Power()
 double Power(int a, int b);
 
 void main()
@@ -19,17 +19,17 @@ void main()
 	setlocale(LC_ALL, "Russian");
 
 	int a, b;
-	cout << "Введите два числа: "; cin >> a >> b;
-	int c = Add(a, b); // Использование функции (Вызов функции - Function call)
+	cout << "Р’РІРµРґРёС‚Рµ РґРІР° С‡РёСЃР»Р°: "; cin >> a >> b;
+	int c = Add(a, b); // РСЃРїРѕР»СЊР·РѕРІР°РЅРёРµ С„СѓРЅРєС†РёРё (Р’С‹Р·РѕРІ С„СѓРЅРєС†РёРё - Function call)
 	cout << a << " + " << b << " = " << c << endl;
 	cout << a << " - " << b << " = " << Sub(a, b) << endl;
 	cout << a << " * " << b << " = " << Mul(a, b) << endl;
 	cout << a << " / " << b << " = " << Div(a, b) << endl;
-	//Добавляем функцию Power()
+	//Р”РѕР±Р°РІР»СЏРµРј С„СѓРЅРєС†РёСЋ Power()
 	cout << a << " ^ " << b << " = " << Power(a, b) << endl;
 }
 
-int Add(int a, int b) // Реализация функции (Определение функции - Function definition)
+int Add(int a, int b) // Р РµР°Р»РёР·Р°С†РёСЏ С„СѓРЅРєС†РёРё (РћРїСЂРµРґРµР»РµРЅРёРµ С„СѓРЅРєС†РёРё - Function definition)
 {
 	int sum = a + b;
 	return sum;
@@ -46,7 +46,7 @@ int Div(int a, int b)
 {
 	return a / b;
 }
-// Добавляем функцию Power()
+// Р”РѕР±Р°РІР»СЏРµРј С„СѓРЅРєС†РёСЋ Power()
 double Power(int a, int b)
 {
 	double pow = 1;
