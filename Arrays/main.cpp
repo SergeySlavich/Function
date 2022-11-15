@@ -1,11 +1,12 @@
+//HOME WORK
 #include<iostream>
 #include<conio.h>
 using namespace std;
 
 //TODO:
 //В Solution Functions добавить проект Arrays, и в нем реализовать следующие функции :
-void FillRand(int arr[], const int SIZE);	//? ? ? FillRand(? ? ? );	//заполняет массив случайными числами в заданном диапазоне 
-//											//(диапазон по умолчанию от 0 до 100)
+void FillRand(int arr[], const int SIZE, int minRand = 0, int maxRand = 100);	//? ? ? FillRand(? ? ? );	//заполняет массив случайными числами в заданном диапазоне 
+//																				//(диапазон по умолчанию от 0 до 100)
 void Print(int arr[], const int SIZE);		//? ? ? Print(? ? ? );		//выводит массив на экран
 int Sum(int arr[], const int SIZE);			//? ? ? Sum(? ? ? );		//возвращает сумму элементов массива
 double Avg(int arr[], const int SIZE);		//? ? ? Avg(? ? ? );		//возвращает среднее-арифметическое элементов массива
@@ -50,16 +51,18 @@ void main()
 	Search(arr, SIZE);				//находит в массиве повторяюшиеся значения, выводит их на экран, и выводит на экран количество повторений
 }
 
-void FillRand(int arr[], const int SIZE)	//заполняет массив случайными числами в заданном диапазоне (диапазон по умолчанию от 0 до 100)
+void FillRand(int arr[], const int SIZE,  int minRand, int maxRand)	//заполняет массив случайными числами в заданном диапазоне (диапазон по умолчанию от 0 до 100)
 {
-	int limit;
-	cout << "Размер массива " << SIZE << " ячеек. Введите ограничение максимального значения массива : ";
-	if (_getch() == 13) limit = 100;
-	else cin >> limit;
-	cout << endl;
+	if (minRand == maxRand) maxRand++;
+	if (minRand > maxRand)
+	{
+		int buffer = minRand;
+		minRand = maxRand;
+		maxRand = buffer;
+	}
 	for (int i = 0; i < SIZE; i++)
 	{
-		arr[i] = rand() % limit;
+		arr[i] = rand() % (maxRand - minRand) + minRand;
 	}
 }
 
@@ -166,7 +169,7 @@ void UniqueRand(int arr[], const int SIZE)			//заполняет массив уникальными случ
 		bool uniq = true;
 		do
 		{
-			arr[i] = rand() % limit;
+			arr[i] = rand() % (limit + 1);
 			for (int j = 0; j < i; j++)
 			{
 				if (arr[i] == arr[j]) uniq = false;
